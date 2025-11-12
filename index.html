@@ -28,14 +28,15 @@
                             <div class="col-md-4 position-relative">
                                 <label for="cc-number" class="form-label">Card #</label>
                                 <input type="text" class="form-control" id="cc-number" placeholder="xxxxxxxxxxxxxxx"
-                                    required>
+                                    maxlength="16" required>
                                 <div class="valid-tooltip">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-4 position-relative">
                                 <label for="cvc-number" class="form-label">CVC #</label>
-                                <input type="text" class="form-control" id="cvc-number" placeholder="xxx" required>
+                                <input type="text" class="form-control" id="cvc-number" placeholder="xxx" maxlength="3"
+                                    required>
                                 <!--QUE HAGO CON EL VALUE?  POR QUE NO PUEDO PONER MAX?-->
                                 <div class="valid-tooltip">
                                     Looks good!
@@ -98,28 +99,33 @@
 
                             <!-- payment info and comments -->
                             <div class="row g-3">
-                                <div class="col-md-6"><!-- HAY MEJOR MANERA DE DIVIDIR ESTOS ESPACIOS Y SU CHILD?  -->
+                                <div class="col-md-4">
                                     <label class="form-label">We accept</label>
-
-                                    <div class="bg-secondary p-2 rounded-2 text-white ">
-                                        <div class="form-check form-check-inline">
-                                            <input type="radio" class="form-check-input" name="pago" id="visa"
-                                                value="visa" required>
-                                            <label for="visa" class="form-check-label">Visa</label>
+                                    <div class="container rounded-2 text-white bg-secondary py-2 d-flex justify-content-between">
+                                        <div class="col">
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" name="pago" id="visa"
+                                                    value="visa" required>
+                                                <label for="visa" class="form-check-label">Visa</label>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="radio" class="form-check-input" name="pago" id="master-card"
-                                                value="master-card" required>
-                                            <label for="master-card" class="form-check-label">MC</label>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" name="pago"
+                                                    id="master-card" value="master-card" required>
+                                                <label for="master-card" class="form-check-label">MC</label>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="radio" class="form-check-input" name="pago" id="amex"
-                                                value="amex" required>
-                                            <label for="amex" class="form-check-label">AMEX</label>
+                                        <div class="col">
+                                            <div class="form-check form-check-inline">
+                                                <input type="radio" class="form-check-input" name="pago" id="amex"
+                                                    value="amex" required>
+                                                <label for="amex" class="form-check-label">AMEX</label>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
+                                <div class="col-md-2"></div>
                                 <div class="col-md-6">
                                     <label for="comments" class="form-label">Comments</label>
                                     <textarea class="form-control" id="comments" rows="3"></textarea>
